@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function fetchDoctors() {
         try {
-            const response = await fetch('https://sujithradevi03.github.io/campus-api-mock/SRM-C1-25.json');
+            const response = await fetch('https://srijandubey.github.io/campus-api-mock/SRM-C1-25.json');
             const data = await response.json();
             allDoctors = data;
             applyFiltersAndSearch();
