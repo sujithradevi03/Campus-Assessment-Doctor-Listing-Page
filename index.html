@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor Listing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="filter-panel">
+        <div class="filter-group">
+            <h3 data-testid="filter-header-moc">Consultation Mode</h3>
+            <label><input type="radio" name="consultation-type" value="Video Consult" data-testid="filter-video-consult"> Video Consult</label><br>
+            <label><input type="radio" name="consultation-type" value="In Clinic" data-testid="filter-in-clinic"> In Clinic</label>
+        </div>
+
+        <div class="filter-group">
+            <h3 data-testid="filter-header-speciality">Speciality</h3>
+            <!-- Add your checkboxes here as needed -->
+            <label><input type="checkbox" value="General Physician" data-testid="filter-specialty-General-Physician"> General Physician</label><br>
+            <label><input type="checkbox" value="Dentist" data-testid="filter-specialty-Dentist"> Dentist</label><br>
+            <!-- Add the rest from your original list -->
+        </div>
+
+        <div class="filter-group">
+            <h3 data-testid="filter-header-sort">Sort</h3>
+            <label><input type="radio" name="sort-by" value="fees" data-testid="sort-fees"> Fees (Ascending)</label><br>
+            <label><input type="radio" name="sort-by" value="experience" data-testid="sort-experience"> Experience (Descending)</label>
+        </div>
+    </div>
+
+    <div style="flex: 1;">
+        <div class="header">
+            <input type="text" id="autocomplete-input" placeholder="Search doctors...">
+            <ul id="suggestions"></ul>
+        </div>
+        <div class="doctor-list" id="doctor-list"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
